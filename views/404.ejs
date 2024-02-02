@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("../partials/header.ejs")%>
+  <body>
+    <%- include("../partials/nav.ejs")%>
+    <div class="not-found content">
+      <h2>Page Not Found</h2>
+      <img src="../sad-face.jpeg" alt="" />
+    </div>
+    <form action="blogs/download-file" >
+        <button class="download-btn">DOWNLOAD THIS EMOJI</button>
+    </form>
+    <%- include("../partials/footer.ejs")%>
+    <script>
+      let downloadBtn = document.querySelector("download-btn")
+      downloadBtn.addEventListener("click", e => {
+        window.location.href = "/download"
+      })
+    </script>
+  </body>
+</html>
